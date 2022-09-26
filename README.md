@@ -1,24 +1,15 @@
-# README
+Zaman Kaydı Uyguluması
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Admin Bilgileri
 
-Things you may want to cover:
+* email: mert@admin.com password:12345678
 
-* Ruby version
+Kurulum
 
-* System dependencies
+* rails db:create
+* rails db:migrate
+* rake db:seed
 
-* Configuration
+Çalıştırma
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* rails s
