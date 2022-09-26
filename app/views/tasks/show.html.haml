@@ -1,19 +1,17 @@
-%p#notice= notice
+%H1
 %p
-  %strong Title:
+  %strong Zaman Kaydı Tipi:
   = @task.title
 %p
-  %strong Description:
+  %strong Yorum:
   = @task.description
 %p
-  %strong Begin time:
-  = @task.begin_time
+  %strong Başlangıç Zamanı:
+  = @task.begin_time.strftime("%k:%M %d.%m.%Y")
 %p
-  %strong Deadline time:
-  = @task.deadline_time
+  %strong Bitiş Zamanı:
+  = @task.deadline_time.strftime("%k:%M %d.%m.%Y")
 %p
-  %strong User:
-  = @task.user_id
-= link_to 'Edit', edit_task_path(@task)
-|
-= link_to 'Back', tasks_path
+= link_to 'Düzenle', edit_task_path(@task), class: "button"
+
+= link_to 'Geri', tasks_path, class: "button"

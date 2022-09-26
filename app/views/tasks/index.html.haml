@@ -1,24 +1,21 @@
-%p#notice= notice
-%h1 Tasks
+%h2
 %table
   %thead
     %tr
-      %th Title
-      %th Description
-      %th Begin time
-      %th Deadline time
-      %th User
+      %th Zaman Tipi
+      %th Yorum
+      %th Başlangıç Zamanı
+      %th Bitiş Zamanı
       %th{:colspan => "3"}
   %tbody
     - @tasks.each do |task|
       %tr
         %td= task.title
         %td= task.description
-        %td= task.begin_time
-        %td= task.deadline_time
-        %td= task.user_id
-        %td= link_to 'Show', task
-        %td= link_to 'Edit', edit_task_path(task)
-        %td= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= task.begin_time.strftime("%k:%M %d.%m.%Y")
+        %td= task.deadline_time.strftime("%k:%M %d.%m.%Y")
+        %td= link_to 'Görüntüle', task, class: "button"
+        %td= link_to 'Kayıdı Düzenle', edit_task_path(task), class: "button"
+        %td= link_to 'Kaydı Sil', task, method: :delete,  data: { confirm: 'Are you sure?' }, class: "button"
 %br/
-= link_to 'New Task', new_task_path
+= link_to 'Yeni Zaman Kaydı Oluştur', new_task_path, class: "button"

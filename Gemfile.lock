@@ -300,6 +300,7 @@ DEPENDENCIES
   haml
   html2haml
   jbuilder (~> 2.7)
+  jquery-rails
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)

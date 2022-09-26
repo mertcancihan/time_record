@@ -8,16 +8,18 @@
         - task.errors.full_messages.each do |message|
           %li= message
   .field
-    = form.label :title
-    = form.text_field :title
+    = form.label "Zaman Tipi"
+    = form.select :title , ["Yakın Vade", "Orta Vade", "Uzun Vade"]
   .field
-    = form.label :description
+    = form.label "Yorum"
     = form.text_area :description
+  .row
+    .field
+      .row
+        = form.label "Başlangıç Zamanı"
+        = form.datetime_select :begin_time, class: "columns small-4"
   .field
-    = form.label :begin_time
-    = form.datetime_select :begin_time
-  .field
-    = form.label :deadline_time
+    = form.label "Bitiş Zamanı"
     = form.datetime_select :deadline_time
   .actions
-    = form.submit
+    = form.submit "Zaman Kaydını Oluştur"

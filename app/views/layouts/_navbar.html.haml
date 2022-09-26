@@ -1,0 +1,9 @@
+.top-bar
+  .top-bar-left
+    %h2 Zaman Kaydı Uygulaması
+  .top-bar-right
+    - if current_user.present?
+      %a.submit.success.button{:href => destroy_user_session_path, method: :delete} Çıkış Yap
+    - else
+      %a.submit.success.button{:href => new_user_session_path} Giriş Yap
+      %a.submit.success.button{:href => new_user_registration_path} Üye Ol

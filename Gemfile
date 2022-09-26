@@ -10,6 +10,7 @@ gem 'haml'
 gem 'html2haml'
 
 gem 'foundation-rails'
+gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.0.6'
